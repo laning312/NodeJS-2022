@@ -1,0 +1,30 @@
+1. 数据库 
+    mydb01
+2. 表   t_user
+   字段如下：
+        字段名        类型          约束         说明
+        id           int            主键        编号
+        username     varchar(50)                用户名
+        password     varchar(255)               密码（密文）
+        nickname     varchar(50)                昵称
+        email        varchar(100)               邮箱
+        headpic      MEDIUMTEXT                 头像（base64编码）
+3. 表   t_article_category
+    字段如下：
+        字段名        类型          约束         说明
+        id           int            主键        编号
+        catename     varchar(100)               分类名称
+        alias        varchar(100)               分类别名
+        is_delete    tinyint                    删除标记 （0为未删除，1为删除）
+4. 表  t_article
+    字段如下：
+        字段名            类型          约束         说明
+        id               int            主键        编号
+        title            varchar(255)               标题
+        content          TEXT                       文章内容
+        cover_img        varchar(100)               文章封面
+        pub_date         varchar(100)               发布时间
+        state            varchar(50)                文章状态（'已发布', '草稿'）
+        cate_id          int             外键       所属分类id
+        author_id        int             外键       作者id
+        is_delete        tinyint                    删除标记 （0为未删除，1为删除）

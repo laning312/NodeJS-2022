@@ -1,0 +1,33 @@
+1. 包的安装方式
+    1)  全局安装
+        npm install 包名@版本号 -g    （版本号不写，表示安装最新版）
+
+        全局安装好某个包之后，不会在当前目录产生任何新文件，但是会产生新命令，在cmd窗口使用
+        示例： 
+        npm install nodemon -g
+        (安装好后可以使用nodemon命令)
+
+        全局安装时不用关心是处在哪个目录下
+
+    2) 本地安装
+        npm install 包名@版本号
+
+        本地安装好某个包之后，会在当前目录下产生新目录node_modules,这个目录里会有很多文件或文件夹
+                            还会在当前目录下产生两个文件 package.json,  package-lock.json （工程的清单文件）
+
+        本地安装又为分：
+            a)  开发环境依赖
+                npm install 包名@版本号 --save-dev
+            b)  生产环境依赖
+                npm install 包名@版本号  [--save]
+
+2. 快速生成工程清单文件 package.json
+    npm init   -  交互方式
+    npm init -y   -  静默方式（不问，全部默认）
+
+
+3. 安装国内淘宝镜像
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
+    安装好之后会产生cnpm命令，以后使用npm安装包时可以用cnpm代替
+    如：
+    cnpm install moment --save   （注意--save不能省略，如果省略不会写清单文件）

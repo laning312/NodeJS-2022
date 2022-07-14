@@ -1,0 +1,8 @@
+1. 编写insertData.js文件 ，向t_student_info中至少录入3条数据
+
+2. 编写selectData.js文件 ，查询出t_student_info表中符合如下条件的结果集：
+    1）姓李的同学
+    2）地址在郑州的同学
+    3）第2页数据（每页5条）
+
+    以上三个每个是一个独立的函数
